@@ -49,15 +49,16 @@ int main(int argc, char* argv[]) {
     std::cout << "Booklet Imposition Layout:\n";
     unsigned int sheets = n / 4;
     
-    for (unsigned int i = 0; i < sheets; ++i) {
+    for (unsigned int i = 0; i < sheets;) {
         unsigned int left_front  = n - 2 * i;
         unsigned int right_front = 1 + 2 * i;
         unsigned int left_back   = 2 + 2 * i;
         unsigned int right_back  = n - 1 - 2 * i;
 
-        std::cout << left_front << " - " << right_front 
+        std::cout << "Sheet " << (++i) << ": "
+                  << "(face) " << left_front << " - " << right_front 
                   << " / " 
-                  << left_back << " - " << right_back << "\n";
+                  << "(back) " << left_back << " - " << right_back << "\n";
     }
 
     return 0;

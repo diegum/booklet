@@ -68,14 +68,15 @@ $ ./booklet --pages 6
 
 ### Example Output
 
-For an input of `6` pages (adjusted to `8`):
+For an input of `11` pages (adjusted to `12`):
 
 ```text
-Note: 6 is not a multiple of 4. Adjusted to 8 pages.
+Note: 11 is not a multiple of 4. Adjusted to 12 pages.
 
 Booklet Imposition Layout:
-8 - 1 / 2 - 7
-6 - 3 / 4 - 5
+Sheet 1: (face) 12 - 1 / (back) 2 - 11
+Sheet 2: (face) 10 - 3 / (back) 4 - 9
+Sheet 3: (face) 8 - 5 / (back) 6 - 7
 ```
 
 ---
@@ -84,10 +85,10 @@ Booklet Imposition Layout:
 
 * To clear compiled binaries while keeping the build cache:
 ```bash
-cmake --build build --target clean
+$ cmake --build build --target clean
 ```
 
 * To completely remove the build folder for a fresh start:
 ```bash
-rm -rf build
+$ rm -rf build
 ```
